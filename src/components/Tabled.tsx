@@ -3,6 +3,7 @@ import { fetchPermitsRequest } from "../redux/actions/permitAction";
 import { RootState } from "../redux/reducers/rootReducer";
 import { useState, useEffect } from "react";
 import { Modal} from 'react-bootstrap'; 
+import { Button } from "react-bootstrap";
 
 interface permitInterface {
      id: number;
@@ -48,7 +49,7 @@ const Tabled: React.FC = () => {
       ) : error ? (
          <div>Error</div>
       ): (
-         <table className="table table-hover table-borderless table-responsive">
+         <table className="table table-borderless table-responsive">
          <thead>
             <tr>
                <th>#</th>
@@ -63,11 +64,12 @@ const Tabled: React.FC = () => {
             .reverse().slice(0, 10)
             //@ts-ignore
             .map((permit, index) => (
-               <tr onClick={()=>handleShow(permit)}>
+               <tr>
                   <td>{index + 1}</td>
                   <td>{permit.review_type}</td>
                   <td>{permit.id}</td>
                   <td>{permit.contact_1_zipcode}</td>
+                  <td><Button onClick={()=>handleShow(permit)}>Show permit</Button> </td>
                </tr>
             ))
             }

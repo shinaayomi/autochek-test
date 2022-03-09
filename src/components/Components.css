@@ -1,0 +1,38 @@
+* {
+    font-family: "Nobile";
+}
+
+.nav-list {
+    background-color: #222;
+    border-color: #080808;
+    position: sticky !important;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.nav-list .navbar-brand {
+    font-size: 18px;
+}
+
+.nav-list .nav-link {
+    font-size: 15.4px;
+}
+
+.nav-list .navbar-brand,
+.nav-list .nav-link {
+    color: #9d9d9d !important;
+}
+
+.nav-list .navbar-brand:hover,
+.nav-list .nav-link:hover {
+    color: #fff !important;
+}
+
+.menu-bar {
+    display: block;
+    background-color: #9d9d9d;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
